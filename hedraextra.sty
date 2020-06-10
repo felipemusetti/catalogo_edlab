@@ -63,7 +63,7 @@
 \newcommand{\oneside}{
 \makeatletter
 \renewcommand\chapter{\if@openright\clearpage\else\clearpage\fi
-                    \thispagestyle{plain}%
+                    %\thispagestyle{plain}%
                     \global\@topnum\z@
                     \@afterindentfalse
                     \secdef\@chapter\@schapter}
@@ -72,7 +72,7 @@
 \newcommand{\twoside}{
 \makeatletter
 \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
-                    \thispagestyle{plain}%
+                    %\thispagestyle{plain}%
                     \global\@topnum\z@
                     \@afterindentfalse
                     \secdef\@chapter\@schapter}

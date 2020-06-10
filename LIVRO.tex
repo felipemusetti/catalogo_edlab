@@ -1,6 +1,6 @@
 \documentclass[semcabeco,showtrims,trimframe,10pt,conselho,spreadimages]{memoir}
 
-\usepackage[medium]{hedraoptions} %% << %%%%%%%%%%%%%%%%
+\usepackage[royal]{hedraoptions} %% << %%%%%%%%%%%%%%%%
 \usepackage[baruch]{hedrastyles}
 \usepackage[xetex,chicagofootnotes]{tipografia}
 \usepackage[standart,sempontinhos]{toc}
@@ -20,7 +20,7 @@
 
 \usepackage{wrapfig}
 
-\newcommand{\forceindent}{\leavevmode{\parindent=1,4em\indent}}
+\newcommand{\forceindent}{\leavevmode{\parindent=1em\indent}}
 
 
 \linespread{1.15}
@@ -119,8 +119,18 @@ ItalicFont = Formular-Light.otf]
 
 %\fancyfoot[CE,CO]{\Formular \footnotesize \textit \thepage}%\renewcommand{\headrulewidth}{0pt}
 
+\usepackage{titlesec}
+
+\titleformat{\chapter}
+[display]
+{\Large\bfseries\Formular}
+ {\large\chaptertitlename\space\thechapter}
+  {20pt}
+  {\flushleft}
+
 
 \fancypagestyle{grid}{
+\setlength{\headsep}{.5cm}
 \fancyhf{}
 \fancyhead[R]{Catálogo Edlab \hspace{2cm}}
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Livros}}}}
@@ -129,12 +139,14 @@ ItalicFont = Formular-Light.otf]
 
 
 \fancypagestyle{indice}{
+%\setlength{\headsep}{1cm}
 \fancyhf{}
-\fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} {\Formular{\textbf{Catálogo 2020/ 1}}}}
+\fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} {\Formular{\textbf{Catálogo 2020/ 3}}}}
 \fancyfoot[C]{}
 }
 
 \fancypagestyle{ayllon}{
+%\setlength{\headsep}{1cm}
 \fancyhf{}
 \fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Aylllon}}}}
@@ -142,6 +154,7 @@ ItalicFont = Formular-Light.otf]
 }
 
 \fancypagestyle{azougue}{
+%\setlength{\headsep}{1cm}
 \fancyhf{}
 \fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Azougue}}}}
@@ -157,6 +170,7 @@ ItalicFont = Formular-Light.otf]
 }
 
 \fancypagestyle{circuito}{
+%\setlength{\headsep}{1cm}
 \fancyhf{}
 \fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Circuito}}}}
@@ -172,21 +186,34 @@ ItalicFont = Formular-Light.otf]
 }
 
 \fancypagestyle{hedra}{
+%\setlength{\headsep}{1cm}
 \fancyhf{}
 \fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
-\fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{hedra}}}}
+\fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Hedra}}}}
 \fancyfoot[C]{}
 }
+
+%\fancypagestyle{hedratexto}{
+%\setlength{\headsep}{2cm}
+%%\addtolength{\footskip}{-1.5cm}
+%\fancyhf{}
+%\fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
+%\fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf%{Hedra}}}}
+%\fancyfoot[C]{}
+%}
+%%\newenvironment{texto}{\changepage{-5mm}{}{}{}{}{}{}{1cm}{}}
+
 
 \fancypagestyle{hedracat}{
 \setlength{\headsep}{.5cm}
 \fancyhf{}
 \fancyhead[R]{Livros ativos \hspace{2cm}}
-\fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{hedra}}}}
+\fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Hedra}}}}
 \fancyfoot[C]{}
 }
 
 \fancypagestyle{ima}{
+%\setlength{\headsep}{1cm}
 \fancyhf{}
 \fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Ímã}}}}
@@ -202,6 +229,7 @@ ItalicFont = Formular-Light.otf]
 }
 
 \fancypagestyle{kalinka}{
+%\setlength{\headsep}{1cm}
 \fancyhf{}
 \fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Kalinka}}}}
@@ -217,6 +245,7 @@ ItalicFont = Formular-Light.otf]
 }
 
 \fancypagestyle{n-1}{
+%\setlength{\headsep}{1cm}
 \fancyhf{}
 \fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{n-1 edições}}}}
@@ -232,6 +261,7 @@ ItalicFont = Formular-Light.otf]
 }
 
 \fancypagestyle{quadrado}{
+%\setlength{\headsep}{1cm}
 \fancyhf{}
 \fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{$\square\fullmoon$}}}}
@@ -247,17 +277,11 @@ ItalicFont = Formular-Light.otf]
     \newpage}
 
 
-\newenvironment{changemargin}[2]{%
-\begin{list}{}{%
-\setlength{\topsep}{0pt}%
-\setlength{\leftmargin}{#1}%
-\setlength{\rightmargin}{#2}%
-\setlength{\listparindent}{\parindent}%
-\setlength{\itemindent}{\parindent}%
-\setlength{\parsep}{\parskip}%
-}%
-\item[]}{\end{list}}
+\newenvironment{changemargin}{%
+  \addtolength{\textheight}{-5mm}
+  \addtolength{\headsep}{.7cm}
 
+  }
 
 
 \usepackage{changepage}

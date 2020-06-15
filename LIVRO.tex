@@ -1,4 +1,4 @@
-\documentclass[semcabeco,showtrims,trimframe,10pt,conselho,spreadimages]{memoir}
+\documentclass[semcabeco,showtrims,10pt,conselho,spreadimages]{memoir}
 
 \usepackage[catalogo2]{hedraoptions} %% << %%%%%%%%%%%%%%%%
 \usepackage[baruch]{hedrastyles}
@@ -44,26 +44,11 @@
 \makeatother
 
 
-%\usepackage{fancyhdr}
-%\pagestyle{fancy}
-%\setlength{\headheight}{9mm}
-%\fancyhf{}
-%\fancyhead[R]{\thepage}
-%\renewcommand{\headrulewidth}{0pt}
 
-%\lhead[\fancyplain{}]{}
-%\chead[\fancyplain{}]{}
-%\rhead[\fancyplain{}]{\cnvt{\thepage} -- \thepage}
+\usepackage{xcolor, soul}
 
-%\newcommand*{\cnvt}[1]{\the\numexpr#1-1\relax}
-
-%\fancypagestyle{chapter}{
-%\pagestyle{fancy}
-%\setlength{\headheight}{5mm}
-%\fancyhf{}
-%\fancyhead[R]{\thepage}
-%\renewcommand{\headrulewidth}{0pt}}
-\addtolength{\topmargin}{.5cm}
+\newcommand{\hlc}[2][yellow]{{\sethlcolor{#1}\hl{#2}}}
+\colorlet{lightyellow}{yellow!60}
 
 
 \usepackage{hyphenat}
@@ -132,6 +117,8 @@ ItalicFont = Formular-Light.otf]
   {\flushleft}
 
 
+%%% HEADERS DE CADA EDITORA
+
 \fancypagestyle{grid}{
 \setlength{\headsep}{1cm}
 \fancyhf{}
@@ -142,7 +129,7 @@ ItalicFont = Formular-Light.otf]
 
 
 \fancypagestyle{indice}{
-\setlength{\headsep}{.5cm}
+\setlength{\headsep}{1cm}
 \fancyhf{}
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} {\Formular{\textbf{Catálogo 2020/ 3}}}}
 \fancyfoot[C]{}
@@ -157,7 +144,7 @@ ItalicFont = Formular-Light.otf]
 }
 
 \fancypagestyle{azougue}{
-%\setlength{\headsep}{1cm}
+\setlength{\headsep}{1cm}
 \fancyhf{}
 \fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Azougue}}}}
@@ -195,17 +182,6 @@ ItalicFont = Formular-Light.otf]
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Hedra}}}}
 \fancyfoot[C]{}
 }
-
-%\fancypagestyle{hedratexto}{
-%\setlength{\headsep}{2cm}
-%%\addtolength{\footskip}{-1.5cm}
-%\fancyhf{}
-%\fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
-%\fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf%{Hedra}}}}
-%\fancyfoot[C]{}
-%}
-%%\newenvironment{texto}{\changepage{-5mm}{}{}{}{}{}{}{1cm}{}}
-
 
 \fancypagestyle{hedracat}{
 \setlength{\headsep}{.5cm}
@@ -280,11 +256,10 @@ ItalicFont = Formular-Light.otf]
     \newpage}
 
 
-\newenvironment{changemargin}{%
+\newenvironment{changemargin}{
   \addtolength{\textheight}{-5mm}
   \addtolength{\headsep}{.7cm}
-
-  }
+}
 
 
 \usepackage{changepage}
@@ -302,14 +277,6 @@ ItalicFont = Formular-Light.otf]
   {\par\xdef\tpd{\the\prevdepth}\egroup
    \prevdepth=\tpd}
 
-%\usepackage{imakeidx} 
-%\makeindex[program=xindy, options=-C utf8 -L portuguese]
-%\newcommand\gobbleone[1]{}
-%\newcommand*{\seeonly}[2]{\ (\emph{\seename} #1)}
-%\newcommand*{\also}[2]{\emph{cf.} #1}
-%\newcommand{\Also}[2]{\emph{See also} #1}
-%\renewcommand\indexname{Índice onomástico}
-%\makeindex[intoc]
 
 \setcounter{tocdepth}{0}
 \setcounter{secnumdepth}{-2} 
@@ -355,20 +322,6 @@ ItalicFont = Formular-Light.otf]
 
 \newcommand{\mystar}{{\fontfamily{lmr}\selectfont$\star$}}
 
-%\makeatletter
-%\renewcommand{\@chapapp}{}% Not necessary...
-%\newenvironment{chapquote}[2][2em]
-%  {\setlength{\@tempdima}{#1}%
-%   \def\chapquote@author{#2}%
-%   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
-%   \itshape}
-%  {\par\scriptsize\hfill-- \chapquote@author\hspace*{\@tempdima}\par\bigskip}
-%\makeatother
-
-%\newcommand\Chapter[2]{\chapter
-%  [#1\hfil\hbox{}\protect\linebreak{\itshape#1}]%
-%  {#1\\[2ex]\Large\itshape#2}%
-%}
 
 \begin{document}
 

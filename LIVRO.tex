@@ -35,16 +35,17 @@
 %\counterwithin*{endnote}{part}
 %\counterwithin*{endnote}{chapter}
 
-\let\latexchapter\chapter
-\makeatletter
-\renewcommand\enoteheading{%
-  \setcounter{secnumdepth}{-2}
-  \latexchapter*{\notesname\markboth{NOTAS}{}}
-  \mbox{}\par\vskip-\baselineskip
-  \let\@afterindentfalse\@afterindenttrue
-}
-\makeatother
+%\let\latexchapter\chapter
+%\makeatletter
+%\renewcommand\enoteheading{%
+  %\setcounter{secnumdepth}{-2}
+  %\latexchapter*{\notesname\markboth{NOTAS}{}}
+  %\mbox{}\par\vskip-\baselineskip
+  %\let\@afterindentfalse\@afterindenttrue
+%}
+%\makeatother
 
+\baselineskip=15pt
 
 
 \usepackage{xcolor, soul}
@@ -106,7 +107,7 @@ ItalicFont = Formular-Light.otf]
 \fancyhfoffset[]{3cm}
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Catálogo Edlab \hspace{2cm}}
+\rhead{Catálogo EdLab \hspace{2cm}}
 \lhead{\hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Livros}}}}
 
 
@@ -127,10 +128,10 @@ ItalicFont = Formular-Light.otf]
 \fancypagestyle{grid}{
 \setlength{\headsep}{1cm}
 \fancyhf{}
-\fancyhead[RE]{Catálogo Edlab \hspace{2cm}}
+\fancyhead[RE]{Catálogo EdLab \hspace{2cm}}
 \fancyhead[LE]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Livros}}}}
 \fancyhead[RO]{\rule[-1ex]{0pt}{1ex} {\Formular{\textbf{Livros}}} \hspace{.25cm} \thepage \hspace{2cm}}
-\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo Edlab}
+\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo EdLab}
 \fancyfoot[C]{}
 }
 
@@ -145,17 +146,17 @@ ItalicFont = Formular-Light.otf]
 \fancypagestyle{ayllon}{
 \setlength{\headsep}{1cm}
 \fancyhf{}
-\fancyhead[RE]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
+\fancyhead[RE]{\rule[-1ex]{0pt}{1ex} Catálogo EdLab \hspace{2cm}}
 \fancyhead[LE]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Aylllon}}}}
 \fancyhead[RO]{\rule[-1ex]{0pt}{1ex} {\Formular{\textbf{Ayllon}}} \hspace{.25cm} \thepage \hspace{2cm}}
-\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo Edlab}
+\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo EdLab}
 \fancyfoot[C]{}
 }
 
 \fancypagestyle{azougue}{
 \setlength{\headsep}{1cm}
 \fancyhf{}
-\fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
+\fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo EdLab \hspace{2cm}}
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Azougue}}}}
 \fancyfoot[C]{}
 }
@@ -171,10 +172,10 @@ ItalicFont = Formular-Light.otf]
 \fancypagestyle{circuito}{
 \setlength{\headsep}{1cm}
 \fancyhf{}
-\fancyhead[RE]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
+\fancyhead[RE]{\rule[-1ex]{0pt}{1ex} Catálogo EdLab \hspace{2cm}}
 \fancyhead[LE]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Circuito}}}}
 \fancyhead[RO]{\rule[-1ex]{0pt}{1ex} {\Formular{\textbf{Circuito}}} \hspace{.25cm} \thepage \hspace{2cm}}
-\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo Edlab}
+\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo EdLab}
 \fancyfoot[C]{}
 }
 
@@ -191,10 +192,10 @@ ItalicFont = Formular-Light.otf]
 \fancypagestyle{hedra}{
 \setlength{\headsep}{1cm}
 \fancyhf{}
-\fancyhead[RE]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
+\fancyhead[RE]{\rule[-1ex]{0pt}{1ex} Catálogo EdLab \hspace{2cm}}
 \fancyhead[LE]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Hedra}}}}
 \fancyhead[RO]{\rule[-1ex]{0pt}{1ex} {\Formular{\textbf{Hedra}}} \hspace{.25cm} \thepage \hspace{2cm}}
-\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo Edlab}
+\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo EdLab}
 \fancyfoot[C]{}
 }
 
@@ -211,10 +212,10 @@ ItalicFont = Formular-Light.otf]
 \fancypagestyle{ima}{
 \setlength{\headsep}{1cm}
 \fancyhf{}
-\fancyhead[RE]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
+\fancyhead[RE]{\rule[-1ex]{0pt}{1ex} Catálogo EdLab \hspace{2cm}}
 \fancyhead[LE]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Ímã}}}}
 \fancyhead[RO]{\rule[-1ex]{0pt}{1ex} {\Formular{\textbf{Ímã}}} \hspace{.25cm} \thepage \hspace{2cm}}
-\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo Edlab}
+\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo EdLab}
 \fancyfoot[C]{}
 }
 
@@ -231,10 +232,10 @@ ItalicFont = Formular-Light.otf]
 \fancypagestyle{kalinka}{
 \setlength{\headsep}{1cm}
 \fancyhf{}
-\fancyhead[RE]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
+\fancyhead[RE]{\rule[-1ex]{0pt}{1ex} Catálogo EdLab \hspace{2cm}}
 \fancyhead[LE]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Kalinka}}}}
 \fancyhead[RO]{\rule[-1ex]{0pt}{1ex} {\Formular{\textbf{Kalinka}}} \hspace{.25cm} \thepage \hspace{2cm}}
-\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo Edlab}
+\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo EdLab}
 \fancyfoot[C]{}
 }
 
@@ -251,10 +252,10 @@ ItalicFont = Formular-Light.otf]
 \fancypagestyle{n-1}{
 \setlength{\headsep}{1cm}
 \fancyhf{}
-\fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
+\fancyhead[R]{\rule[-1ex]{0pt}{1ex} Catálogo EdLab \hspace{2cm}}
 \fancyhead[L]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{n-1 edições}}}}
 \fancyhead[RO]{\rule[-1ex]{0pt}{1ex} {\Formular{\textbf{n-1 edições}}} \hspace{.25cm} \thepage \hspace{2cm}}
-\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo Edlab}
+\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo EdLab}
 \fancyfoot[C]{}
 }
 
@@ -271,10 +272,10 @@ ItalicFont = Formular-Light.otf]
 \fancypagestyle{quadrado}{
 \setlength{\headsep}{1cm}
 \fancyhf{}
-\fancyhead[RE]{\rule[-1ex]{0pt}{1ex} Catálogo Edlab \hspace{2cm}}
+\fancyhead[RE]{\rule[-1ex]{0pt}{1ex} Catálogo EdLab \hspace{2cm}}
 \fancyhead[LE]{\rule[-1ex]{0pt}{1ex} \hspace{2cm} \thepage \hspace{.25cm} {\Formular{\textbf{Quadradocirculo}}}}
 \fancyhead[RO]{\rule[-1ex]{0pt}{1ex} {\Formular{\textbf{Quadradocirculo}}} \hspace{.25cm} \thepage \hspace{2cm}}
-\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo Edlab}
+\fancyhead[LO]{\rule[-1ex]{0pt}{1ex}  \hspace{2cm} Catálogo EdLab}
 \fancyfoot[C]{}
 }
 %--------------------------------------------
